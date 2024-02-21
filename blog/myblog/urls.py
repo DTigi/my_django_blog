@@ -2,7 +2,8 @@ from django.contrib.auth.views import LogoutView
 from django.urls import path
 
 from blog import settings
-from .views import MainView, PostDetailView, SignUpView, SignInView, log_out, FeedBackView, SuccessView
+from .views import MainView, PostDetailView, SignUpView, SignInView, log_out, FeedBackView, SuccessView, \
+    SearchResultsView
 
 urlpatterns = [
     path('', MainView.as_view(), name='index'),
@@ -12,4 +13,5 @@ urlpatterns = [
     path('blog/<slug>/', PostDetailView.as_view(), name='post_detail'),
     path('contact/', FeedBackView.as_view(), name='contact'),
     path('contact/success/', SuccessView.as_view(), name='success'),
+    path('search/', SearchResultsView.as_view(), name='search_results'),
 ]
