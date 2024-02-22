@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
+from taggit.managers import TaggableManager
 
 
 class Post(models.Model):
@@ -14,7 +15,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True, verbose_name="Время редактирования")
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    tag = models.CharField(max_length=200)
+    tag = TaggableManager()
 
     class Meta:
         verbose_name = 'Пост'

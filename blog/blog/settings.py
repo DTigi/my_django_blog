@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'myblog.apps.MyblogConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'taggit',
 ]
 
 MIDDLEWARE = [
