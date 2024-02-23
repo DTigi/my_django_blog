@@ -27,8 +27,9 @@
                         {{ post.content|safe }}
                     </p>
                     <div class="d-flex justify-content-end">
-                        <a href="" class="badge text-bg-info me-1">#NuxtJS</a>
-                        <a href="" class="badge text-bg-info">#CSS</a>
+                        {% for tag in post.tag.all %}
+                            <a href="{% url 'tag' tag.slug %}" class="badge bg-info text-dark me-2">#{{ tag }}</a>
+                        {% endfor %}
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between">
