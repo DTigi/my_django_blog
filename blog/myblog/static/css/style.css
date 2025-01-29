@@ -1,7 +1,3 @@
-.carousel-item {
-    height: 20rem;
-}
-
 .my-carousel {
     padding: 0;
 }
@@ -19,7 +15,7 @@
 }
 
 .carousel-item {
-    height: 20rem;
+    height: 15rem;
 }
 
 .my-footer {
